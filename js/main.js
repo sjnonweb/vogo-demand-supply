@@ -194,44 +194,6 @@ function findEdge(edges, from, to){
 const m = document.querySelector('.status');
 const logs = document.querySelector('.message .logs');
 
-// function evalLoop() {
-//   m.textContent = 'Status: Creating new demand...';
-//   setTimeout(() => {
-//     randomize();
-//     m.textContent = 'Status: Finding free rides to meet demand...';
-//     setTimeout(() => {
-//       let processed = optimize();
-//       let date = new Date();
-//       let el;           
-//       if(processed.length === 0) {
-//         m.textContent = 'Failed to meet demand';  
-
-//         el = document.createElement('div');
-//         el.textContent = date;
-//         el.style.marginTop = '20px';
-//         logs.appendChild(el);        
-
-//         el = document.createElement('div');
-//         el.textContent = '– Unable to meet demand due to constraints. Or there wasn\'t enough demand for the algo to kick in';        
-//         logs.appendChild(el);
-//       } else {
-//         m.textContent = 'Demand met succesfully'        
-
-//         el = document.createElement('div');
-//         el.textContent = date;
-//         el.style.marginTop = '20px';
-//         logs.appendChild(el);
-
-//         processed.forEach((p) => {
-//           el = document.createElement('div');
-//           el.textContent = `– Gave free ride from ${p.from} to ${p.to}.`;
-//           logs.appendChild(el);
-//         });
-//       }          
-//     }, 2000);
-//   }, 2000);
-// }
-
 function evalLoop() {
   m.textContent = 'Status: Creating new demand...';
   setTimeout(() => {
@@ -269,11 +231,11 @@ function evalLoop() {
         });
       }
       logs.insertBefore(rootLog, logs.children[1]);
-    }, 2000);
-  }, 2000);
+    }, 3000);
+  }, 3000);
 }
 
 // correct zoom level
 s.cameras[0].goTo({ x: 0, y: 0, angle: 0, ratio: 1.2 });
 
-setInterval(evalLoop, 5000);
+setInterval(evalLoop, 10000);
