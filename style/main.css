@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+}
+#container-pop {  
+  width: 60%;
+  height: 80%;
+  margin: 10% 40% 0 0;
+}
+#graph-container {
+  position: absolute;
+  width: 60%;
+  height: 80%;  
+}
+.status {
+  text-align: center;
+  width: 60%;
+}
+.message {
+  position: absolute;
+  margin-left: 60%;  
+  width: 40%;  
+}
+.logs {
+  overflow: scroll;
+  max-height: 500px;
+  margin-top: 50px;
+}
